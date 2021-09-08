@@ -1,21 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import LoginScreen from './screens/LoginScreen/LoginScreen';
+import CreateFeedScreen from './screens/CreateFeedScreen/CreateFeedScreen';
+import CreateFeedFormScreen from './screens/CreateFeedFormScreen/CreateFeedFormScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View>
+        {/* <LoginScreen /> */}
+        {/* <CreateFeedScreen /> */}
+        <CreateFeedFormScreen />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
