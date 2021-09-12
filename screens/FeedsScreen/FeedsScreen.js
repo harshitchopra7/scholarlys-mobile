@@ -1,17 +1,19 @@
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
-import GlobalStyles from '../../GlobalStyles/GlobalStyles';
+import Feeds from '../../components/Feeds/Feeds';
 import Navbar from '../../components/Navbar/Navbar';
-import CreateFeedForm from '../../components/CreateFeedForm/CreateFeedForm';
 
-const CreateFeedFormScreen = () => {
+const FeedsScreen = () => {
     return (
-        <SafeAreaView style={styles.create_feed_form_screen_container}>
-            <CreateFeedForm />
+        <SafeAreaView style={styles.feeds_screen_container}>
+            <Feeds />
+            <View style={styles.create_feed_screen_navbar}>
+                <Navbar />
+            </View>
         </SafeAreaView>
-    )
+    );
 }
-export default CreateFeedFormScreen;
+export default FeedsScreen;
 
 const styles = StyleSheet.create({
     create_feed_screen_navbar: {
@@ -20,9 +22,8 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
     },
-    create_feed_form_screen_container: {
+    feeds_screen_container: {
         width: '100%',
         height: '100%',
-        padding: 30,
     },
-})
+});

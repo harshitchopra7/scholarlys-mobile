@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: 'white',
     },
     navbar_item_main_container: {
         flexDirection: 'row',

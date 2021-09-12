@@ -25,6 +25,7 @@ export default CreateFeed;
 const styles = StyleSheet.create({
     create_feed_container: {
         // backgroundColor: 'yellow',
+        margin: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },
