@@ -6,6 +6,7 @@ import CreateFeedScreen from './screens/CreateFeedScreen/CreateFeedScreen';
 import CreateFeedFormScreen from './screens/CreateFeedFormScreen/CreateFeedFormScreen';
 import FeedsScreen from './screens/FeedsScreen/FeedsScreen';
 import BookmarksScreen from './screens/BookmarksScreen/BookmarksScreen';
+import FeedDescriptionScreen from './screens/FeedDescriptionScreen/FeedDescriptionScreen';
 
 export default function App() {
   return (
@@ -14,8 +15,9 @@ export default function App() {
         {/* <LoginScreen /> */}
         {/* <CreateFeedScreen /> */}
         {/* <CreateFeedFormScreen /> */}
-        <FeedsScreen />
+        {/* <FeedsScreen /> */}
         {/* <BookmarksScreen /> */}
+        <FeedDescriptionScreen />
       </View>
     </SafeAreaView>
   );
