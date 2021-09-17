@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable } from 'react-native';
+import TEXTS from '../../constants/constants';
 
 const Login = () => {
     return (
         <SafeAreaView style={styles.login_main}>
             <View style={styles.login_top}>
-                <Text style={styles.title}>Scholarlys</Text>
-                <Text style={styles.sub_title1}>Keep up with research</Text>
+                <Text style={styles.title}>{TEXTS.SCHOLARLYS}</Text>
+                <Text style={styles.sub_title1}>{TEXTS.SUBTITLE1}</Text>
                 <Text style={styles.sub_title2}>
-                    Get latest scientific content from major
-                    journals, news source and blogs
+                    {TEXTS.SUBTITLE2}
                 </Text>
             </View>
             <View style={styles.login_bottom}>
@@ -20,7 +20,7 @@ const Login = () => {
                         }}
                         style={styles.login_button_img}
                     />
-                    <Text style={styles.login_text}>Log in with Google</Text>
+                    <Text style={styles.login_text}>{TEXTS.LOGIN_WITH_GOOGLE}</Text>
                 </Pressable>
             </View>
         </SafeAreaView>

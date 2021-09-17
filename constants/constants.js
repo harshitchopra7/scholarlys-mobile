@@ -1,0 +1,20 @@
+const TEXTS = {
+    READING_LIST: 'Reading List',
+    CLICK_TO_GET_STARTED: 'Click below to get started',
+    CREATE_FEED: 'Create Feed',
+    ADD: 'Add',
+    ADD_KEYWORD_INSTRUCTION: '(Write a keyword and press enter or add button)',
+    AUTHOR: 'Author',
+    FULL_TEXT: 'Full Text',
+    PUBLICATIONS: 'Publications',
+    NEWS_BLOGS: 'News/Blogs',
+    TODAY: 'Today',
+    SCHOLARLYS: 'Scholarlys',
+    SUBTITLE1: 'Keep up with research',
+    SUBTITLE2: 'Get latest scientific content from major journals, news source and blogs',
+    LOGIN_WITH_GOOGLE: 'Log in with Google',
+    UPDATE_FEED: 'Update Feed',
+    UPDATE: 'Update',
+    DELETE: 'Delete',
+};
+export default TEXTS;

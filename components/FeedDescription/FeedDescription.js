@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInput, ScrollView } from 'react-native';
+import TEXTS from '../../constants/constants';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 
 const FeedDescription = () => {
@@ -12,13 +13,13 @@ const FeedDescription = () => {
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
             <View style={styles.feed_description_container}>
                 <Text style={styles.feed_description_title}>{title}</Text>
-                <Text style={{ fontWeight: '700', fontSize: 15 }}>Author:
+                <Text style={{ fontWeight: '700', fontSize: 15 }}>{TEXTS.AUTHOR}:
                     <Text style={{ fontWeight: '400' }}> {author}</Text>
                 </Text>
                 <Text style={styles.feed_description_abstract}>
                     <Text>{abstract}</Text>
                 </Text>
-                <Text style={styles.feed_description_full_text}>Full Text</Text>
+                <Text style={styles.feed_description_full_text}>{TEXTS.FULL_TEXT}</Text>
             </View>
         </SafeAreaView>
     )

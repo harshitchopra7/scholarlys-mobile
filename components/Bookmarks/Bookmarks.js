@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInput, ScrollView } from 'react-native';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import SingleFeed from '../SingleFeed/SingleFeed';
+import TEXTS from '../../constants/constants';
 
 const Feeds = () => {
     return (
@@ -9,7 +10,7 @@ const Feeds = () => {
             <View style={styles.bookmarks_container}>
                 <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}
                     showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.bookmarks_title}>Reading List</Text>
+                    <Text style={styles.bookmarks_title}>{TEXTS.READING_LIST}</Text>
                     <SingleFeed />
                     <SingleFeed />
                     <SingleFeed />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInput, ScrollView } from 'react-native';
+import TEXTS from '../../constants/constants';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import SingleFeed from '../SingleFeed/SingleFeed';
 
@@ -11,10 +12,10 @@ const Feeds = () => {
                 {/* Publications and News/blogs buttons */}
                 <View style={styles.feeds_container_categories}>
                     <View style={styles.feeds_container_categories_one}>
-                        <Text style={styles.feeds_container_categories_one_text}>Publications</Text>
+                        <Text style={styles.feeds_container_categories_one_text}>{TEXTS.PUBLICATIONS}</Text>
                     </View>
                     <View style={styles.feeds_container_categories_two}>
-                        <Text style={styles.feeds_container_categories_two_text}>News/Blogs</Text>
+                        <Text style={styles.feeds_container_categories_two_text}>{TEXTS.NEWS_BLOGS}</Text>
                     </View>
                 </View>
 
@@ -22,7 +23,7 @@ const Feeds = () => {
                 <View style={styles.feeds_today_container}>
                     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}
                         showsHorizontalScrollIndicator={false}>
-                        <Text style={styles.feeds_today_container_text}>Today</Text>
+                        <Text style={styles.feeds_today_container_text}>{TEXTS.TODAY}</Text>
                         <SingleFeed />
                         <SingleFeed />
                         <SingleFeed />

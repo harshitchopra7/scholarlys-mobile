@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInput } from 'react-native';
+import TEXTS from '../../constants/constants';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 
 const UpdateFeedForm = () => {
@@ -7,7 +8,7 @@ const UpdateFeedForm = () => {
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
             <View style={styles.update_feed_form_container}>
                 <View>
-                    <Text style={styles.update_feed_form_container_title}>Update Feed</Text>
+                    <Text style={styles.update_feed_form_container_title}>{TEXTS.UPDATE_FEED}</Text>
                 </View>
                 <View>
                     <TextInput
@@ -23,18 +24,18 @@ const UpdateFeedForm = () => {
                         />
                     </View>
                     <View style={styles.add_research_keywords_add_button}>
-                        <Text>Add</Text>
+                        <Text>{TEXTS.ADD}</Text>
                     </View>
                 </View>
                 <View>
-                    <Text>(Write a keyword and press enter or add button)</Text>
+                    <Text>{TEXTS.ADD_KEYWORD_INSTRUCTION}</Text>
                 </View>
                 <View style={styles.update_feed_form_buttons}>
                     <Pressable style={styles.update_feed_form_button_element}>
-                        <Text style={styles.update_feed_form_text}>Update</Text>
+                        <Text style={styles.update_feed_form_text}>{TEXTS.UPDATE}</Text>
                     </Pressable>
                     <Pressable style={styles.update_feed_form_button_element}>
-                        <Text style={styles.update_feed_form_text}>Delete</Text>
+                        <Text style={styles.update_feed_form_text}>{TEXTS.DELETE}</Text>
                     </Pressable>
                 </View>
             </View>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInput } from 'react-native';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
+import TEXTS from '../../constants/constants';
 
 const CreateFeedForm = () => {
     return (
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
             <View style={styles.create_feed_form_container}>
                 <View>
-                    <Text style={styles.create_feed_form_container_title}>Create Feed</Text>
+                    <Text style={styles.create_feed_form_container_title}>{TEXTS.CREATE_FEED}</Text>
                 </View>
                 <View>
                     <TextInput
@@ -23,11 +24,11 @@ const CreateFeedForm = () => {
                         />
                     </View>
                     <View style={styles.add_research_keywords_add_button}>
-                        <Text>Add</Text>
+                        <Text>{TEXTS.ADD}</Text>
                     </View>
                 </View>
                 <View>
-                    <Text>(Write a keyword and press enter or add button)</Text>
+                    <Text>{TEXTS.ADD_KEYWORD_INSTRUCTION}</Text>
                 </View>
             </View>
         </SafeAreaView>
