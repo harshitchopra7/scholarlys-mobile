@@ -3,7 +3,7 @@ import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable } from 'react-native';
 import TEXTS from '../../constants/constants';
 
-const CreateFeed = () => {
+const CreateFeed = ({ navigation }) => {
     return (
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
             <View style={styles.create_feed_container}>
@@ -11,7 +11,7 @@ const CreateFeed = () => {
                     <Text style={styles.create_feed_text_text}>{TEXTS.CLICK_TO_GET_STARTED}</Text>
                 </View>
                 <View style={styles.create_feed_button_container}>
-                    <Pressable style={styles.create_feed_button}>
+                    <Pressable onPress={() => navigation.navigate('CreateFeedFormScreen')} style={styles.create_feed_button}>
                         <Text style={styles.create_feed_button_text}>
                             + {TEXTS.CREATE_FEED}
                         </Text>

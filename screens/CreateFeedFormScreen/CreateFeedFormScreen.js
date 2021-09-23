@@ -4,10 +4,10 @@ import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import Navbar from '../../components/Navbar/Navbar';
 import CreateFeedForm from '../../components/CreateFeedForm/CreateFeedForm';
 
-const CreateFeedFormScreen = () => {
+const CreateFeedFormScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.create_feed_form_screen_container}>
-            <CreateFeedForm />
+            <CreateFeedForm navigation={navigation} />
         </SafeAreaView>
     )
 }

@@ -3,12 +3,12 @@ import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
 import Feeds from '../../components/Feeds/Feeds';
 import Navbar from '../../components/Navbar/Navbar';
 
-const FeedsScreen = () => {
+const FeedsScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.feeds_screen_container}>
-            <Feeds />
+            <Feeds navigation={navigation} />
             <View style={styles.create_feed_screen_navbar}>
-                <Navbar />
+                <Navbar navigation={navigation} />
             </View>
         </SafeAreaView>
     );
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
+        backgroundColor: 'red',
     },
     feeds_screen_container: {
         width: '100%',

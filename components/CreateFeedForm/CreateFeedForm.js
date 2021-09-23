@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInp
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import TEXTS from '../../constants/constants';
 
-const CreateFeedForm = () => {
+const CreateFeedForm = ({ navigation }) => {
     return (
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
             <View style={styles.create_feed_form_container}>
@@ -23,9 +23,9 @@ const CreateFeedForm = () => {
                             placeholder="Add research keywords"
                         />
                     </View>
-                    <View style={styles.add_research_keywords_add_button}>
+                    <Pressable onPress={() => navigation.navigate('FeedsScreen')} style={styles.add_research_keywords_add_button}>
                         <Text>{TEXTS.ADD}</Text>
-                    </View>
+                    </Pressable>
                 </View>
                 <View>
                     <Text>{TEXTS.ADD_KEYWORD_INSTRUCTION}</Text>

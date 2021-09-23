@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable } from 'react-native';
 import TEXTS from '../../constants/constants';
 
-const Login = () => {
+const Login = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.login_main}>
             <View style={styles.login_top}>
@@ -13,7 +13,7 @@ const Login = () => {
                 </Text>
             </View>
             <View style={styles.login_bottom}>
-                <Pressable style={styles.login_button}>
+                <Pressable onPress={() => navigation.navigate('CreateFeedScreen')} style={styles.login_button}>
                     <Image
                         source={{
                             uri: "https://banner2.cleanpng.com/20180612/llj/kisspng-google-logo-google-search-google-doodle-circular-economy-5b2082fe438318.3928951115288573422766.jpg"

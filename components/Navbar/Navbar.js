@@ -3,7 +3,7 @@ import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import { View, SafeAreaView, Text, Image, StyleSheet, Pressable } from 'react-native';
 import SideBar from '../Sidebar/SideBar';
 
-const Navbar = () => {
+const Navbar = ({ navigation }) => {
 
     const [sideBarClicked, setSideBarClicked] = useState(false);
 
@@ -18,7 +18,12 @@ const Navbar = () => {
 
     return (
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
-            {sideBarClicked && <SideBar />}
+            {sideBarClicked && <SideBar /> ? (
+                <View style={styles.test}>
+                    <SideBar />
+                </View>
+            ) : <Text>hello</Text>
+            }
             <View style={styles.navbar_container}>
                 <View style={styles.navbar_item_main_container}>
                     <View style={styles.navbar_item_container}>
@@ -26,21 +31,26 @@ const Navbar = () => {
                             <Image source={{ uri: "https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552739283bazga05wbc.png" }} style={{ width: 40, height: 40 }} />
                             <Pressable onPress={openSideBar}><Text>Press</Text></Pressable>
                         </View>
-                        <View>
+                        <Pressable onPress={() => navigation.navigate('LoginScreen')}>
                             <Image source={{ uri: "https://icons-for-free.com/iconfiles/png/512/HOME-131994911289288683.png" }} style={{ width: 40, height: 40 }} />
-                        </View>
-                        <View>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('BookmarksScreen')}>
                             <Image source={{ uri: "https://e7.pngegg.com/pngimages/625/387/png-clipart-bookmark-computer-icons-symbol-symbol-miscellaneous-angle-thumbnail.png" }} style={{ width: 30, height: 30 }} />
-                        </View>
+                        </Pressable>
                     </View>
                 </View>
             </View>
-        </SafeAreaView>
+        </SafeAreaView >
     )
 }
 export default Navbar;
 
 const styles = StyleSheet.create({
+    test: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+    },
     navbar_container: {
         flex: 1,
         alignItems: 'center',

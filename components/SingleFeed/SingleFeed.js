@@ -2,17 +2,17 @@ import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Image, Button, Pressable, TextInput } from 'react-native';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 
-const SingleFeed = () => {
+const SingleFeed = ({ navigation }) => {
 
     const title = "Assessing factors associated with social connectedness in adults with mobility disabilities";
     const keyword = "Adsorption";
 
     return (
         <SafeAreaView>
-            <View style={styles.single_feed_container}>
+            <Pressable onPress={() => navigation.navigate('FeedDescriptionScreen')} style={styles.single_feed_container}>
                 <Text style={styles.single_feed_title}>{title}</Text>
                 <Text style={styles.single_feed_keyword}>{keyword}</Text>
-            </View>
+            </Pressable>
         </SafeAreaView>
     )
 }

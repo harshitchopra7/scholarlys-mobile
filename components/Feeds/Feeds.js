@@ -4,7 +4,7 @@ import TEXTS from '../../constants/constants';
 import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import SingleFeed from '../SingleFeed/SingleFeed';
 
-const Feeds = () => {
+const Feeds = ({ navigation }) => {
     return (
         <SafeAreaView style={GlobalStyles.droidSafeArea}>
             <View style={styles.feeds_container}>
@@ -24,14 +24,14 @@ const Feeds = () => {
                     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}
                         showsHorizontalScrollIndicator={false}>
                         <Text style={styles.feeds_today_container_text}>{TEXTS.TODAY}</Text>
-                        <SingleFeed />
-                        <SingleFeed />
-                        <SingleFeed />
-                        <SingleFeed />
-                        <SingleFeed />
-                        <SingleFeed />
-                        <SingleFeed />
-                        <SingleFeed />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
+                        <SingleFeed navigation={navigation} />
                     </ScrollView>
                 </View>
 

@@ -4,13 +4,13 @@ import GlobalStyles from '../../GlobalStyles/GlobalStyles';
 import Navbar from '../../components/Navbar/Navbar';
 import CreateFeed from '../../components/CreateFeed/CreateFeed';
 
-const CreateFeedScreen = () => {
+const CreateFeedScreen = ({ navigation }) => {
     return (
         <SafeAreaView>
             <View style={styles.create_feed_screen_container}>
-                <CreateFeed />
+                <CreateFeed navigation={navigation} />
                 <View style={styles.create_feed_screen_navbar}>
-                    <Navbar />
+                    <Navbar navigation={navigation} />
                 </View>
             </View>
         </SafeAreaView>

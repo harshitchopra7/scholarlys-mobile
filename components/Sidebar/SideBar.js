@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
         flex: 1,
         position: 'absolute',
         height: '100%',
-        backgroundColor: 'red',
+        backgroundColor: 'yellow',
     },
 })
